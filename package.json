@@ -1,0 +1,34 @@
+{
+  "name": "com.pe.proyecta-peru.api",
+  "version": "0.0.1",
+  "description": "Api Rest de la Aplicación Proyecta Peru",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoelRetamozo/proyecta-peru.git"
+  },
+  "keywords": [
+    "proyectos de ley",
+    "gestion de proyectos de ley"
+  ],
+  "author": "Edson Joel Retamozo Santi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoelRetamozo/proyecta-peru/issues"
+  },
+  "homepage": "https://github.com/JoelRetamozo/proyecta-peru#readme",
+  "dependencies": {
+    "bcrypt": "^2.0.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.0",
+    "pg": "^7.8.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
