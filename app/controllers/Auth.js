@@ -15,11 +15,10 @@ function login(req, res) {
                 bcrypt.compare(req.body.password, usuario.rows[0].password).then(match => {
                     if(match){
                         payload = {
+                            idUsuario: usuario.rows[0].idUsuario,
                             username: usuario.rows[0].username,
-                            nombre: usuario.rows[0].nombre,
-                            apellidopaterno: usuario.rows[0].apellidopaterno,
-                            apellidomaterno: usuario.rows[0].apellidomaterno,
-                            idrol: usuario.rows[0].idrol
+                            persona: usuario.rows[0].nombre + " " + usuario.rows[0].apellidoPaterno + " " + usuario.rows[0].apellidoMaterno,
+                            idRol: usuario.rows[0].idRol
                         }
 
                         jwt.sign(payload, CONFIG.SECRET_TOKEN, function(error, token) {
