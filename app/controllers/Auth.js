@@ -25,7 +25,7 @@ function login(req, res) {
                             if(error){
                                 res.status(_http.SERVER_ERROR).send({codigo: -1, error});
                             }else{
-                                res.status(_http.OK).send({codigo: 1, message: 'Acceso', token});
+                                res.status(_http.OK).send({codigo: 1, message: 'Acceso', token, payload});
                             }
                         });
                     }else{

@@ -3,9 +3,10 @@ const bodyParser = require('body-parser');
 
 const App = express();
 
+const Auth = require('./routes/auth');
 const Rol = require('./routes/rol');
 const Usuario = require('./routes/usuario');
-const Auth = require('./routes/auth');
+const ProyectoLey = require('./routes/proyectoLey');
 
 const AuthToken = require('./middlewares/AuthToken');
 
@@ -22,8 +23,9 @@ App.use(AuthToken);
 App.use(bodyParser.json());
 App.use(bodyParser.urlencoded({ extended: false })); //Si queremos peticiones de formulario cambiarlo a true
 
+App.use('/auth', Auth);
 App.use('/rol', Rol);
 App.use('/usuario', Usuario);
-App.use('/auth', Auth);
+App.use('/proyectoLey', ProyectoLey);
 
 module.exports = App;

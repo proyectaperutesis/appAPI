@@ -41,11 +41,18 @@ function number(number) {
     }
 }
 
+// function boolean(boolean) {
+//     if (boolean) {
+//         return 1;
+//     } else {
+//         return 0;
+//     }
+// }
 function boolean(boolean) {
     if (boolean) {
-        return 1;
+        return boolean;
     } else {
-        return 0;
+        return null;
     }
 }
 
